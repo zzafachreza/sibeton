@@ -37,7 +37,7 @@ export default function Splash({navigation}) {
   }).start();
 
   Animated.timing(bottomImage, {
-    toValue: 0,
+    toValue: -50,
     duration: 1300,
     useNativeDriver: false,
   }).start();
@@ -68,57 +68,62 @@ export default function Splash({navigation}) {
   }, []);
   return (
     <SafeAreaView style={styles.page}>
-      <View
+      <ImageBackground
+        source={require('../../assets/back-beton.png')}
         style={{
           flex: 1,
-          // backgroundColor: 'red',
-          padding: 20,
         }}>
-        <Animated.Text
+        <View
           style={{
-            marginTop: 20,
-            fontFamily: fonts.secondary[400],
-            fontSize: windowWidth / 22,
-            color: colors.primary,
-            bottom: bottom,
+            flex: 1,
+            // backgroundColor: 'red',
+            padding: 20,
           }}>
-          Aplikasi Untuk Memudahkan Anda Dalam Perhitungan Beton
-        </Animated.Text>
+          <Animated.Text
+            style={{
+              marginTop: 20,
+              fontFamily: fonts.secondary[400],
+              fontSize: windowWidth / 22,
+              color: colors.primary,
+              bottom: bottom,
+            }}>
+            Aplikasi Hitung Resiko Retak dari PT Solusi Bangun Beton
+          </Animated.Text>
 
-        <Animated.View
-          style={{
-            width: windowWidth,
-            // borderRadius: 80 / 2,
-            right: bottomSun,
-            // bottom: bottomImage,
-            // margin: 10,
-            height: 10,
-            backgroundColor: colors.secondary,
-          }}
-        />
-        <Animated.Image
-          resizeMode="contain"
-          source={require('../../assets/logo.png')}
-          style={{
-            opacity: opacity,
+          <Animated.View
+            style={{
+              width: windowWidth,
+              // borderRadius: 80 / 2,
+              right: bottomSun,
+              // bottom: bottomImage,
+              // margin: 10,
+              height: 10,
+              backgroundColor: colors.secondary,
+            }}
+          />
+          <Animated.Image
+            resizeMode="contain"
+            source={require('../../assets/logo.png')}
+            style={{
+              opacity: opacity,
+              aspectRatio: 1,
+            }}
+          />
+        </View>
 
-            aspectRatio: 1.5,
-          }}
-        />
-      </View>
-
-      <View
-        style={{
-          paddingHorizontal: 20,
-        }}>
-        <Animated.Image
-          resizeMode="contain"
-          source={require('../../assets/building.png')}
+        <View
           style={{
-            marginBottom: bottomImage,
-          }}
-        />
-      </View>
+            paddingHorizontal: 20,
+          }}>
+          <Animated.Image
+            resizeMode="contain"
+            source={require('../../assets/building.png')}
+            style={{
+              marginBottom: bottomImage,
+            }}
+          />
+        </View>
+      </ImageBackground>
     </SafeAreaView>
   );
 }

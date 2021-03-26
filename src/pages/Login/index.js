@@ -68,7 +68,7 @@ export default function Login({navigation}) {
               color: colors.black,
               // maxWidth: 230,
             }}>
-            Silahkan untuk masuk terlebih dahulu, ke Aplikasi Sobat Beton
+            Silahkan login untuk masuk ke aplikasi Sobat Beton
           </Text>
           <MyGap jarak={20} />
           <MyInput
@@ -97,7 +97,7 @@ export default function Login({navigation}) {
           <MyGap jarak={40} />
           <MyButton
             warna={colors.primary}
-            title="MASUK"
+            title="LOGIN"
             Icons="log-in"
             onPress={masuk}
           />

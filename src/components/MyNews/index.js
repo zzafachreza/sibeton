@@ -18,11 +18,11 @@ export default function MyNews() {
   return (
     <View
       style={{
-        flex: 1,
+        // flex: 1,
+        // backgroundColor: 'red',
         paddingVertical: 10,
-
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
       }}>
       {/* batas */}
 
@@ -34,9 +34,8 @@ export default function MyNews() {
         }
         activeOpacity={0.9}
         style={{
-          // flex: 1,
-
-          width: 200,
+          flex: 1,
+          margin: 5,
           height: 200,
           borderRadius: 10,
           backgroundColor: 'white',
@@ -70,8 +69,8 @@ export default function MyNews() {
         }
         activeOpacity={0.9}
         style={{
-          // flex: 1,
-          width: 200,
+          flex: 1,
+          margin: 5,
           height: 200,
           borderRadius: 10,
           backgroundColor: 'white',
