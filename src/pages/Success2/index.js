@@ -19,7 +19,7 @@ export default function Success2({navigation, route}) {
 
   setTimeout(() => {
     navigation.replace('MainApp');
-  }, 500);
+  }, 1000);
 
   Animated.timing(txt, {
     toValue: 10,

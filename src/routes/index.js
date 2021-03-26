@@ -34,6 +34,8 @@ import {
   Tambah,
   List,
   Success2,
+  ListDetail,
+  Edit,
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {BottomNavigator} from '../components';
@@ -201,6 +203,60 @@ export default function Router() {
         component={List}
         options={({route, navigation}) => ({
           title: 'LIST DATA',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: colors.primary,
+            elevation: 0, // remove shadow on Android
+          },
+          cardStyleInterpolator: ({current, layouts}) => {
+            return {
+              cardStyle: {
+                transform: [
+                  {
+                    translateX: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [layouts.screen.width, 0],
+                    }),
+                  },
+                ],
+              },
+            };
+          },
+        })}
+      />
+
+      <Stack.Screen
+        name="ListDetail"
+        component={ListDetail}
+        options={({route, navigation}) => ({
+          title: 'LIST DETAIL',
+          headerTintColor: 'white',
+          headerStyle: {
+            backgroundColor: colors.primary,
+            elevation: 0, // remove shadow on Android
+          },
+          cardStyleInterpolator: ({current, layouts}) => {
+            return {
+              cardStyle: {
+                transform: [
+                  {
+                    translateX: current.progress.interpolate({
+                      inputRange: [0, 1],
+                      outputRange: [layouts.screen.width, 0],
+                    }),
+                  },
+                ],
+              },
+            };
+          },
+        })}
+      />
+
+      <Stack.Screen
+        name="Edit"
+        component={Edit}
+        options={({route, navigation}) => ({
+          title: 'EDIT DATA',
           headerTintColor: 'white',
           headerStyle: {
             backgroundColor: colors.primary,

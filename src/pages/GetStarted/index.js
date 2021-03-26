@@ -18,8 +18,7 @@ export default function GetStarted({navigation}) {
   const windowHeight = Dimensions.get('window').height;
 
   const bottom = new Animated.Value(windowWidth);
-  const w = new Animated.Value(0);
-  const h = new Animated.Value(0);
+  const opacity = new Animated.Value(0);
   const top = new Animated.Value(0);
 
   Animated.timing(bottom, {
@@ -28,14 +27,8 @@ export default function GetStarted({navigation}) {
     useNativeDriver: false,
   }).start();
 
-  Animated.timing(w, {
-    toValue: 260,
-    duration: 1000,
-    useNativeDriver: false,
-  }).start();
-
-  Animated.timing(h, {
-    toValue: 225,
+  Animated.timing(opacity, {
+    toValue: 1,
     duration: 1000,
     useNativeDriver: false,
   }).start();
@@ -62,6 +55,15 @@ export default function GetStarted({navigation}) {
           resizeMode="contain"
           style={{
             aspectRatio: 1,
+          }}
+        />
+        <Animated.Image
+          source={require('../../assets/logo.png')}
+          style={{
+            opacity: opacity,
+            bottom: 50,
+            aspectRatio: 1.5,
+            resizeMode: 'center',
           }}
         />
       </View>

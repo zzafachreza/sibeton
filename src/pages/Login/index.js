@@ -56,7 +56,7 @@ export default function Login({navigation}) {
         }}>
         <View style={styles.page}>
           <Image
-            source={require('../../assets/beton.png')}
+            source={require('../../assets/logo.png')}
             style={styles.image}
           />
 
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   image: {
-    aspectRatio: 1,
+    aspectRatio: 1.5,
     resizeMode: 'contain',
   },
 });

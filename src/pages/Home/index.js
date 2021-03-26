@@ -23,19 +23,13 @@ import MyNews from '../../components/MyNews';
 export default function Home({navigation}) {
   const images = [
     {
-      image:
-        'https://sikomarjabar.com/admin/upload/210320035446210304063349EJP_3248.jpg',
-      desc: 'Silent Waters in the mountains in midst of Himilayas',
+      image: 'https://kipmi.or.id/wp-content/uploads/2016/11/beton1.jpg',
     },
     {
-      image:
-        'https://sikomarjabar.com/admin/upload/210320035331210312034824EJP_3892-min.jpg',
-      desc:
-        'Red fort in India New Delhi is a magnificient masterpeiece of humans',
+      image: 'https://kipmi.or.id/wp-content/uploads/2017/01/molen-kecil.jpg',
     },
     {
-      image:
-        'https://sikomarjabar.com/admin/upload/210320035918210304063632tebing%20keraton.jpg',
+      image: 'https://kipmi.or.id/wp-content/uploads/2016/11/beton8.jpg',
     },
   ];
 

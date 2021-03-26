@@ -13,25 +13,20 @@ import axios from 'axios';
 import {showMessage} from 'react-native-flash-message';
 import LottieView from 'lottie-react-native';
 
-export default function Tambah({navigation, route}) {
+export default function Edit({navigation, route}) {
+  //   console.log();
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState({
-    nama: null,
-    tc: null,
-    ta: null,
-    r: null,
-    v: null,
-  });
+  const [data, setData] = useState(route.params);
 
   const simpan = () => {
     setLoading(true);
     console.log(data);
-    axios.post('https://zavalabs.com/api/beton_add.php', data).then(res => {
+    axios.post('https://zavalabs.com/api/beton_edit.php', data).then(res => {
       console.log(res);
       setTimeout(() => {
         setLoading(false);
         navigation.navigate('Success2', {
-          messege: 'Data berhasil ditambah',
+          messege: 'Data berhasil diedit',
         });
         setData({
           nama: null,
@@ -139,8 +134,8 @@ export default function Tambah({navigation, route}) {
         />
         <MyGap jarak={10} />
         <MyButton
-          warna={colors.secondary}
-          title="SIMPAN DATA"
+          warna={colors.primary}
+          title="SIMPAN PERUBAHAN"
           Icons="log-in"
           onPress={simpan}
         />

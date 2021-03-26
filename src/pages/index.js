@@ -9,6 +9,8 @@ import Success2 from './Success2';
 import Berita from './Berita';
 import Tambah from './Tambah';
 import List from './List';
+import ListDetail from './ListDetail';
+import Edit from './Edit';
 
 export {
   Splash,
@@ -22,4 +24,6 @@ export {
   Berita,
   Tambah,
   List,
+  Edit,
+  ListDetail,
 };
