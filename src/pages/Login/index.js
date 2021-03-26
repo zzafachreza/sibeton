@@ -47,18 +47,45 @@ export default function Login({navigation}) {
     }, 1200);
   };
   return (
-    <ImageBackground
-      style={styles.page}
-      source={require('../../assets/back-beton.png')}>
+    <ImageBackground style={styles.page}>
       <ScrollView
         style={{
           flex: 1,
         }}>
         <View style={styles.page}>
-          <Image
-            source={require('../../assets/logo.png')}
-            style={styles.image}
-          />
+          <View
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              // backgroundColor: 'red',
+              height: 350,
+            }}>
+            <Text
+              style={{
+                fontSize: windowWidth / 5,
+                fontFamily: fonts.secondary[900],
+                color: colors.secondary,
+                bottom: -40,
+              }}>
+              SOBAT
+            </Text>
+            <Text
+              style={{
+                fontSize: windowWidth / 5,
+                fontFamily: fonts.secondary[900],
+                color: colors.primary,
+              }}>
+              BETON
+            </Text>
+            <Image
+              source={require('../../assets/logo.png')}
+              style={{
+                top: '-15%',
+                aspectRatio: 1.4,
+                resizeMode: 'center',
+              }}
+            />
+          </View>
 
           <Text
             style={{

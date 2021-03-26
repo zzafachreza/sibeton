@@ -68,62 +68,82 @@ export default function Splash({navigation}) {
   }, []);
   return (
     <SafeAreaView style={styles.page}>
-      <ImageBackground
-        source={require('../../assets/back-beton.png')}
+      <View
         style={{
           flex: 1,
+          // backgroundColor: 'red',
+          padding: 20,
         }}>
-        <View
+        <Animated.Text
           style={{
-            flex: 1,
-            // backgroundColor: 'red',
-            padding: 20,
+            marginTop: 20,
+            fontFamily: fonts.secondary[400],
+            fontSize: windowWidth / 22,
+            color: colors.primary,
+            bottom: bottom,
           }}>
-          <Animated.Text
-            style={{
-              marginTop: 20,
-              fontFamily: fonts.secondary[400],
-              fontSize: windowWidth / 22,
-              color: colors.primary,
-              bottom: bottom,
-            }}>
-            Aplikasi Hitung Resiko Retak dari PT Solusi Bangun Beton
-          </Animated.Text>
+          Aplikasi Hitung Resiko Retak dari PT Solusi Bangun Beton
+        </Animated.Text>
 
-          <Animated.View
-            style={{
-              width: windowWidth,
-              // borderRadius: 80 / 2,
-              right: bottomSun,
-              // bottom: bottomImage,
-              // margin: 10,
-              height: 10,
-              backgroundColor: colors.secondary,
-            }}
-          />
-          <Animated.Image
-            resizeMode="contain"
-            source={require('../../assets/logo.png')}
-            style={{
-              opacity: opacity,
-              aspectRatio: 1,
-            }}
-          />
-        </View>
-
-        <View
+        <Animated.View
           style={{
-            paddingHorizontal: 20,
+            width: windowWidth,
+            // borderRadius: 80 / 2,
+            right: bottomSun,
+            // bottom: bottomImage,
+            // margin: 10,
+            height: 10,
+            backgroundColor: colors.primary,
+          }}
+        />
+      </View>
+
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+          // backgroundColor: 'red',
+        }}>
+        <Text
+          style={{
+            fontSize: windowWidth / 5,
+            fontFamily: fonts.secondary[900],
+            color: colors.secondary,
+            bottom: -40,
           }}>
-          <Animated.Image
-            resizeMode="contain"
-            source={require('../../assets/building.png')}
-            style={{
-              marginBottom: bottomImage,
-            }}
-          />
-        </View>
-      </ImageBackground>
+          SOBAT
+        </Text>
+        <Text
+          style={{
+            fontSize: windowWidth / 5,
+            fontFamily: fonts.secondary[900],
+            color: colors.primary,
+          }}>
+          BETON
+        </Text>
+        <Animated.Image
+          source={require('../../assets/logo.png')}
+          style={{
+            top: '-15%',
+            opacity: opacity,
+            aspectRatio: 1.4,
+            resizeMode: 'center',
+          }}
+        />
+      </View>
+
+      <View
+        style={{
+          paddingHorizontal: 20,
+        }}>
+        <Animated.Image
+          resizeMode="contain"
+          source={require('../../assets/building.png')}
+          style={{
+            marginBottom: bottomImage,
+          }}
+        />
+      </View>
     </SafeAreaView>
   );
 }

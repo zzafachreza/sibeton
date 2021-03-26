@@ -89,11 +89,8 @@ export default function Router() {
         component={Login}
         options={{
           headerTitle: 'Login',
-          headerTintColor: 'white',
-          headerStyle: {
-            backgroundColor: colors.primary,
-            elevation: 0, // remove shadow on Android
-          },
+          headerShown: false,
+
           cardStyleInterpolator: ({current, layouts}) => {
             return {
               cardStyle: {

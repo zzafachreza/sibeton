@@ -75,7 +75,7 @@ export default function Tambah({navigation, route}) {
         <MyGap jarak={10} />
         <MyInput
           label="Air Temperature (deg C)"
-          keyboardType="number"
+          keyboardType="decimal-pad"
           iconname="thermometer"
           value={data.tc}
           onChangeText={value =>
@@ -89,7 +89,7 @@ export default function Tambah({navigation, route}) {
         <MyGap jarak={10} />
         <MyInput
           label="Concrete Temperature (deg C)"
-          keyboardType="number"
+          keyboardType="decimal-pad"
           iconname="thermometer-outline"
           value={data.ta}
           onChangeText={value =>
@@ -102,7 +102,7 @@ export default function Tambah({navigation, route}) {
         <MyGap jarak={10} />
         <MyInput
           label="Relative Humidity (%)"
-          keyboardType="number"
+          keyboardType="decimal-pad"
           iconname="cloudy-outline"
           value={data.r}
           onChangeText={value =>
@@ -115,7 +115,7 @@ export default function Tambah({navigation, route}) {
         <MyGap jarak={10} />
         <MyInput
           label="Wind Velocity (kph)"
-          keyboardType="number"
+          keyboardType="decimal-pad"
           iconname="pulse"
           value={data.v}
           onChangeText={value =>
