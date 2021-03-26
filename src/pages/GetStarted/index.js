@@ -12,6 +12,7 @@ import {
 import {MyButton, MyGap} from '../../components';
 import {colors} from '../../utils/colors';
 import {color} from 'react-native-reanimated';
+import {fonts} from '../../utils/fonts';
 
 export default function GetStarted({navigation}) {
   const windowWidth = Dimensions.get('window').width;
@@ -40,9 +41,7 @@ export default function GetStarted({navigation}) {
   }).start();
 
   return (
-    <ImageBackground
-      style={styles.page}
-      source={require('../../assets/back-beton.png')}>
+    <ImageBackground style={styles.page}>
       <View
         style={{
           flex: 1,
@@ -54,15 +53,39 @@ export default function GetStarted({navigation}) {
           source={require('../../assets/beton.png')}
           resizeMode="contain"
           style={{
-            aspectRatio: 1,
+            top: '30%',
+            aspectRatio: 0.7,
           }}
         />
+      </View>
+      <View
+        style={{
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}>
+        <Text
+          style={{
+            fontSize: windowWidth / 5,
+            fontFamily: fonts.secondary[900],
+            color: colors.secondary,
+            bottom: -40,
+          }}>
+          SOBAT
+        </Text>
+        <Text
+          style={{
+            fontSize: windowWidth / 5,
+            fontFamily: fonts.secondary[900],
+            color: colors.primary,
+          }}>
+          BETON
+        </Text>
         <Animated.Image
           source={require('../../assets/logo.png')}
           style={{
+            top: '0%',
             opacity: opacity,
-            bottom: 50,
-            aspectRatio: 1.5,
+            aspectRatio: 1.4,
             resizeMode: 'center',
           }}
         />
