@@ -78,7 +78,7 @@ export default function Splash({navigation}) {
           style={{
             marginTop: 20,
             fontFamily: fonts.secondary[400],
-            fontSize: windowWidth / 22,
+            fontSize: windowWidth / 20,
             color: colors.primary,
             bottom: bottom,
           }}>
@@ -100,6 +100,7 @@ export default function Splash({navigation}) {
 
       <View
         style={{
+          top: '10%',
           justifyContent: 'center',
           alignItems: 'center',
           // backgroundColor: 'red',

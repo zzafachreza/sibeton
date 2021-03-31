@@ -82,12 +82,16 @@ export default function List({navigation, route}) {
 
   const _renderItem = ({item}) => {
     let resiko = '';
+    let warna = '';
     if (item.e < 0.5) {
       resiko = 'RENDAH';
+      warna = 'green';
     } else if (item.e >= 0.5 && item.e <= 1) {
       resiko = 'SEDANG';
+      warna = 'orange';
     } else if (item.e > 1) {
       resiko = 'TINGGI';
+      warna = 'red';
     } else {
       resiko = '-';
     }
@@ -189,6 +193,9 @@ export default function List({navigation, route}) {
           <Text
             style={{
               fontSize: 14,
+              color: colors.white,
+              backgroundColor: warna,
+              padding: 5,
               fontFamily: fonts.secondary[600],
             }}>
             {resiko}

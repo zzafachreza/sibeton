@@ -58,6 +58,7 @@ export default function Login({navigation}) {
               justifyContent: 'center',
               alignItems: 'center',
               // backgroundColor: 'red',
+              paddingTop: 50,
               height: 350,
             }}>
             <Text
