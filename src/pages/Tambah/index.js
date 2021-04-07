@@ -58,23 +58,23 @@ export default function Tambah({navigation, route}) {
           }}>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: 16,
               fontFamily: fonts.secondary[600],
             }}>
-            PLASTIC SHRINKAGE CRACKING
+            Perhitungan Retak Susut
           </Text>
           <Text
             style={{
-              fontSize: 12,
+              fontSize: 14,
               fontFamily: fonts.secondary[400],
             }}>
-            Bleed Water Evaporation Nomogradph Formula
+            (Plastic Shrinkage Cracking)
           </Text>
         </View>
 
         <MyGap jarak={10} />
         <MyInput
-          label="Air Temperature (deg C)"
+          label="Masukan temperatur udara (Celcius)"
           keyboardType="decimal-pad"
           iconname="thermometer"
           value={data.tc}
@@ -88,7 +88,7 @@ export default function Tambah({navigation, route}) {
 
         <MyGap jarak={10} />
         <MyInput
-          label="Concrete Temperature (deg C)"
+          label="Masukan temperatur beton segar (Celcius)"
           keyboardType="decimal-pad"
           iconname="thermometer-outline"
           value={data.ta}
@@ -101,7 +101,7 @@ export default function Tambah({navigation, route}) {
         />
         <MyGap jarak={10} />
         <MyInput
-          label="Relative Humidity (%)"
+          label="Masukan kelembaban relatif (%)"
           keyboardType="decimal-pad"
           iconname="cloudy-outline"
           value={data.r}
@@ -114,7 +114,7 @@ export default function Tambah({navigation, route}) {
         />
         <MyGap jarak={10} />
         <MyInput
-          label="Wind Velocity (kph)"
+          label="Masukan kecepatan angin (km per jam/kph)"
           keyboardType="decimal-pad"
           iconname="pulse"
           value={data.v}
@@ -128,6 +128,7 @@ export default function Tambah({navigation, route}) {
         <MyGap jarak={10} />
         <MyInput
           label="Keterangan"
+          label2="(Masukan keterangan cuaca hujan/kering, kondisi pekerja , dll)"
           iconname="newspaper-outline"
           value={data.nama}
           onChangeText={value =>

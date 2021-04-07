@@ -53,7 +53,7 @@ export default function GetStarted({navigation}) {
           source={require('../../assets/beton.png')}
           resizeMode="contain"
           style={{
-            top: '30%',
+            top: windowHeight / 10,
             aspectRatio: 0.7,
           }}
         />
@@ -65,6 +65,7 @@ export default function GetStarted({navigation}) {
         }}>
         <Text
           style={{
+            top: 120,
             fontSize: windowWidth / 5,
             fontFamily: fonts.secondary[900],
             color: colors.secondary,
@@ -74,6 +75,7 @@ export default function GetStarted({navigation}) {
         </Text>
         <Text
           style={{
+            top: 70,
             fontSize: windowWidth / 5,
             fontFamily: fonts.secondary[900],
             color: colors.primary,

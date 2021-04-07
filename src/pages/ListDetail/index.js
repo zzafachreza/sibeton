@@ -29,7 +29,9 @@ export default function ListDetail({route}) {
           backgroundColor: colors.white,
           elevation: 1,
         }}>
-        <Text style={styles.title}>{item.nama}</Text>
+        <Text style={styles.title}>
+          Ini adalah data pengecoran pada tanggal
+        </Text>
         <Text style={styles.date}>{item.tanggal}</Text>
         <View
           style={{
@@ -42,7 +44,7 @@ export default function ListDetail({route}) {
                 fontFamily: fonts.secondary[400],
                 fontSize: 12,
               }}>
-              Air Temperature
+              Temperatur udara (Celcius)
             </Text>
             <Text
               style={{
@@ -58,7 +60,7 @@ export default function ListDetail({route}) {
                 fontFamily: fonts.secondary[400],
                 fontSize: 12,
               }}>
-              Concrete Temperature
+              Temperatur beton (Celcius)
             </Text>
             <Text
               style={{
@@ -80,7 +82,7 @@ export default function ListDetail({route}) {
                 fontFamily: fonts.secondary[400],
                 fontSize: 12,
               }}>
-              Relative Humidity
+              Kelembaban relatif (%)
             </Text>
             <Text
               style={{
@@ -96,7 +98,7 @@ export default function ListDetail({route}) {
                 fontFamily: fonts.secondary[400],
                 fontSize: 12,
               }}>
-              Wind Velocity
+              Kecepatan angin (kph)
             </Text>
             <Text
               style={{
@@ -123,7 +125,7 @@ export default function ListDetail({route}) {
               fontFamily: fonts.secondary[400],
               fontSize: 12,
             }}>
-            Evaporation Rate
+            Tingkat penguapan beton (Evaporation Rate)
           </Text>
           <View
             style={{
@@ -155,6 +157,28 @@ export default function ListDetail({route}) {
             </Text>
           </View>
         </View>
+      </View>
+      <View
+        style={{
+          padding: 10,
+          borderWidth: 1,
+        }}>
+        <Text
+          style={{
+            fontSize: 12,
+            lineHeight: 30,
+            fontFamily: fonts.secondary[600],
+          }}>
+          Deskripsi keterangan saat pengecoran :
+        </Text>
+        <Text
+          style={{
+            fontSize: 12,
+            lineHeight: 30,
+            fontFamily: fonts.secondary[400],
+          }}>
+          {item.nama}
+        </Text>
       </View>
     </ImageBackground>
   );

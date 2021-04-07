@@ -122,7 +122,7 @@ export default function List({navigation, route}) {
           borderWidth: 1,
           borderColor: colors.primary,
         }}>
-        <Text style={styles.title}>{item.nama}</Text>
+        <Text style={styles.title}>Data pengecoran pada tanggal : </Text>
         <Text style={styles.date}>{item.tanggal}</Text>
         <View
           style={{
@@ -136,11 +136,11 @@ export default function List({navigation, route}) {
           }}>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: 12,
               lineHeight: 30,
               fontFamily: fonts.secondary[400],
             }}>
-            Evaporation Rate
+            Evaporation Rate (Tingkat Penguapan)
           </Text>
           <View
             style={{
@@ -185,7 +185,7 @@ export default function List({navigation, route}) {
           }}>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: 12,
               fontFamily: fonts.secondary[400],
             }}>
             Resiko Retak
@@ -214,10 +214,10 @@ export default function List({navigation, route}) {
           }}>
           <Text
             style={{
-              fontSize: 14,
+              fontSize: 12,
               fontFamily: fonts.secondary[400],
             }}>
-            Mutu Beton ({fc})
+            Mutu beton yang disarankan
           </Text>
           <Text
             style={{
@@ -289,6 +289,14 @@ export default function List({navigation, route}) {
             </Text>
           </TouchableOpacity>
         </View>
+        <Text
+          style={{
+            fontFamily: fonts.secondary[400],
+            color: colors.black,
+            fontSize: 12,
+          }}>
+          * Lihat saran pengecoran pada artikel edukasi agar hasil maksimal
+        </Text>
       </TouchableOpacity>
     );
   };

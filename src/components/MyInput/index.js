@@ -14,6 +14,7 @@ export default function MyInput({
   secureTextEntry,
   styleInput,
   placeholder,
+  label2,
   styleLabel,
   colorIcon = colors.primary,
 }) {
@@ -37,6 +38,19 @@ export default function MyInput({
           {label}
         </Text>
       </View>
+      {label2 && (
+        <Text
+          style={{
+            fontFamily: fonts.secondary[600],
+            color: colors.primary,
+            left: 10,
+            fontSize: 14,
+            marginVertical: 1,
+            ...styleLabel,
+          }}>
+          {label2}
+        </Text>
+      )}
       <TextInput
         placeholder={placeholder}
         secureTextEntry={secureTextEntry}
